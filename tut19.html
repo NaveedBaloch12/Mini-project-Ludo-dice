@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random numbers</title>
+    <style>
+        html {
+            font-size: 80.5%;
+        }
+        body{
+            box-sizing: border-box;
+        }
+        .contanier{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 20rem;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 30px;
+            background-color: bisque;
+            padding: 10rem;
+            box-shadow: 0px 0px 18px black;
+        }
+        h2{
+            text-align: justify;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+        }
+        .box{
+            width: 6rem;
+            height: 5rem;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 12px;
+        }
+        #demo{
+            font-size: 20px;
+        }
+        button{
+            padding: 12px 14px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: olivedrab;
+            color: white;
+            border-radius: 6px;
+            border: none;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(136, 176, 55);
+        }
+        button:active{
+            background-color: white;
+            color: black;
+        }
+
+
+        @media(max-width: 1100px) {
+            html {
+                font-size: 50%;
+            }
+        }
+
+        @media(max-width: 600px) {
+            html {
+                font-size: 30%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contanier">
+        <h2>Ludo Random Number Picker Dice</h2>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = rendom(1,7);" ondblclick="dublclc()" > Click Here </button>
+        <div class="box">
+            <p id="demo"> </p>
+            <p id="demo1"> </p>
+        </div>
+    </div>
+
+        <script>
+            function rendom(min, max){
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+            function dublclc(){
+                document.getElementById('demo').style.display= 'none';
+                document.getElementById('demo1').innerHTML = "Reload Page";
+                alert("Cheating")
+            }
+    </script>
+</body>
+</html>
